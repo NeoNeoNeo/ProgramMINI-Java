@@ -1,7 +1,7 @@
 //
 // PROGRAMMINI IN JAVA
 //
-// Author:  Alessandro Brusò
+// Author:  Alessandro BrusÃ²
 // Date:    05 Nov 2017
 // Version: 1.0
 //
@@ -22,7 +22,7 @@ public class Main {
     public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
     }
-  
+
     // test_reverse
     // scopo: testare il reverse di una stringa
     public static void test_reverse() {
