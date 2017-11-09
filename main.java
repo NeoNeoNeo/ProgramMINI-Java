@@ -65,6 +65,7 @@ public class Main {
     // main
     public static void main(String args[]) { 
       test_reverse();
+      System.out.println();
       test_factorial();
     }
 
