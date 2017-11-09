@@ -1,12 +1,42 @@
-//
+﻿//
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    05 Nov 2017
+// Date:    09 Nov 2017
 // Version: 1.0
 //
 
 public class Main {
+
+    /*******************************
+     *
+     *   PROGRAMMINI SUGLI INTERI
+     *
+     *******************************/
+
+     // fattoriale
+     // scopo: restituisce il fattoriale dell'intero in input
+     // input: un intero n
+     // output: n!
+     public static int factorial(int n) throws IllegalArgumentException {
+       if (n < 0)
+         throw new IllegalArgumentException("Parametro n non valido");
+       int f = 1;
+       while (n > 1) {
+         f = f * n;
+         n--;
+       }
+       return f;
+     }
+
+    // test_factorial
+    // scopo: testare il fattoriale di un numero
+    public static void test_factorial() {
+      System.out.println("FATTORIALE di un intero\n\n");
+      for (int i = 0; i <= 10; i++)
+        System.out.println("Fattoriale(" + i + ") = " + factorial(i));
+    }
+
 
     /*******************************
      *
@@ -26,15 +56,16 @@ public class Main {
     // test_reverse
     // scopo: testare il reverse di una stringa
     public static void test_reverse() {
+      System.out.println("REVERSE di una stringa\n\n");
       String s = "Ciao";
       System.out.println("original: " + s);
       System.out.println("reverse:  " + reverse(s));
     }
 
     // main
-    public static void main(String args[]) {
-      System.out.println("REVERSE di una stringa\n\n");
+    public static void main(String args[]) { 
       test_reverse();
+      test_factorial();
     }
 
 }
