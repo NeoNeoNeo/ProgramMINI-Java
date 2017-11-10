@@ -5,13 +5,13 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 ## Funzionalità
 
 *Numbers*
-* *Absolute*
-* *Factorial* iterative and recursive version
+* *absolute*
+* *factorial* iterative and recursive version
 
 *Strings*
-* *Reverse*
-* *ToLowerCase*
-* *ToUpperCase*
+* *reverse*
+* *toLowerCase*
+* *toUpperCase*
 
 ## Autori
 
