@@ -5,9 +5,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 ## Funzionalità
 
 *Numbers*
-* *Factorial* iterative version
-* *Factorial* recursive version
 * *Absolute*
+* *Factorial* iterative and recursive version
 
 *Strings*
 * *Reverse*
