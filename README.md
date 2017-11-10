@@ -1,12 +1,17 @@
 # ProgramMINI in Java
 
-Piccoli programmi in Java liberamente fruibili e distribuibili
+Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 ## Funzionalità
 
+* *Numbers*
+* 09/11/2017 Factorial (iterative version)
+* 10/11/2017 Factorial (recursive version)
+* 10/11/2017 Absolute
+
+* *Strings*
 * 05/11/2017 Reverse
-* 09/11/2017 Factorial
 
 ## Autori
 
-* **Alessandro Brusò** - *Initial work* - [ProgramMINI in Java](https://github.com/abruso/ProgramMINI-Java)
+* **Alessandro Brusò** - [ProgramMINI in Java](https://github.com/abruso/ProgramMINI-Java)
