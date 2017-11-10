@@ -28,7 +28,7 @@ public class Main {
      public static void test_absolute() {
       System.out.println("VALORE ASSOLUTO di un numero\n");
       for (int i = -5; i <= 5; i++)
-        System.out.println("Abs(" + i + ") = " + absolute(i));
+        System.out.println("Absolute(" + i + ") = " + absolute(i));
      }
 
      // fattoriale - versione ricorsiva
