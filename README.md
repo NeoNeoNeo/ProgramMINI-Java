@@ -5,8 +5,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 ## Funzionalità
 
 *Numbers*
-* 09/11/2017 Factorial - *iterative version*
-* 10/11/2017 Factorial - *recursive version*
+* 09/11/2017 Factorial *iterative version*
+* 10/11/2017 Factorial *recursive version*
 * 10/11/2017 Absolute
 
 *Strings*
