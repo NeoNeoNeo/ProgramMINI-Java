@@ -81,13 +81,33 @@ public class Main {
         return new StringBuilder(s).reverse().toString();
     }
 
-    // test_reverse
-    // scopo: testare il reverse di una stringa
-    public static void test_reverse() {
-      System.out.println("REVERSE di una stringa\n");
+    // toLowerCase
+    // scopo:  restituisce la stringa in input in minuscolo
+    // input:  una stringa s
+    // output: una nuova stringa dove i caratteri quelli della stringa in input,
+    //         ma tutti minuscoli
+    public static String toLowerCase(String s) {
+        return new String(s).toLowerCase();
+    }
+
+    // toUpperCase
+    // scopo:  restituisce la stringa in input in maiuscolo
+    // input:  una stringa s
+    // output: una nuova stringa dove i caratteri quelli di della stringa in input,
+    //         ma tutti maiuscoli
+    public static String toUpperCase(String s) {
+        return new String(s).toUpperCase();
+    }
+    
+    // test_string
+    // scopo: testare le funzionalità sulle stringhe
+    public static void test_string() {
+      System.out.println("TEST di una stringa\n");
       String s = "Ciao";
-      System.out.println("original: " + s);
-      System.out.println("reverse:  " + reverse(s));
+      System.out.println("Original:  " + s);
+      System.out.println("Reverse:   " + reverse(s));
+      System.out.println("Lowercase: " + toLowerCase(s));
+      System.out.println("Uppercase: " + toUpperCase(s));
     }
 
     /*******************************
@@ -105,7 +125,7 @@ public class Main {
       test_factorial();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
-      test_reverse();
+      test_string();
     }
 
 }

@@ -10,6 +10,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 *Strings*
 * *Reverse*
+* *ToLowerCase*
+* *ToUpperCase*
 
 ## Autori
 
