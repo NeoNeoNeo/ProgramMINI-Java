@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Absolute(" + i + ") = " + absolute(i));
      }
 
-     // fattoriale - versione ricorsiva
+     // factorialRecursive - versione ricorsiva del fattoriale
      // scopo:       restituisce il fattoriale dell'intero in input
      // definizione: 0! = 1, n! = n(n-1)! se n > 0
      // input:       un intero n
@@ -42,7 +42,7 @@ public class Main {
        return n == 0 ? 1 : n * factorialRecursive(n-1);
      }
 
-     // fattoriale - versione iterativa
+     // factorial - versione iterativa del fattoriale
      // scopo:       restituisce il fattoriale dell'intero in input
      // definizione: 0! = 1, n! = n(n-1)! se n > 0
      // input:       un intero n
@@ -56,7 +56,23 @@ public class Main {
          n--;
        }
        return f;
-     }     
+     }
+
+    // isNegative
+    // scopo:  stabilire se il numero in input è negativo
+    // input:  un intero n
+    // output: restiuisce true se l'intero in input è negativo, false altrimenti
+    public static boolean isNegative(int n) {
+      return n < 0;
+    }
+
+    // isPositive
+    // scopo:  stabilire se il numero in input è positivo
+    // input:  un intero n
+    // output: restiuisce true se l'intero in input è positivo, false altrimenti
+    public static boolean isPositive(int n) {
+      return n > 0;
+    }
 
     // test_factorial
     // scopo: testare il fattoriale di un numero
