@@ -14,49 +14,57 @@ public class Main {
      *
      *******************************/
 
-     // valore assoluto
-     // scopo:       restituisce il valore assoluto dell'intero in input
-     // definizione: |x| = -x se x < 0, |x| = x se x >= 0
-     // input:       un intero n
-     // output:      |n|
-     public static int absolute(int n) throws IllegalArgumentException {
-       return n < 0 ? -n : n;
-     }
+    // absolute - valore assoluto
+    // scopo:       restituisce il valore assoluto dell'intero in input
+    // definizione: |x| = -x se x < 0, |x| = x se x >= 0
+    // input:       un intero n
+    // output:      |n|
+    public static int absolute(int n) throws IllegalArgumentException {
+      return n < 0 ? -n : n;
+    }
 
-     // test_absolute
-     // scopo: testare il valore assoluto di un intero
-     public static void test_absolute() {
-      System.out.println("VALORE ASSOLUTO di un numero\n");
-      for (int i = -5; i <= 5; i++)
-        System.out.println("Absolute(" + i + ") = " + absolute(i));
-     }
+    // test_absolute
+    // scopo: testare il valore assoluto di un intero
+    public static void test_absolute() {
+     System.out.println("VALORE ASSOLUTO di un numero\n");
+     for (int i = -5; i <= 5; i++)
+       System.out.println("Absolute(" + i + ") = " + absolute(i));
+    }
 
-     // factorialRecursive - versione ricorsiva del fattoriale
-     // scopo:       restituisce il fattoriale dell'intero in input
-     // definizione: 0! = 1, n! = n(n-1)! se n > 0
-     // input:       un intero n
-     // output:      n!
-     public static int factorialRecursive(int n) throws IllegalArgumentException {
-       if (n < 0)
-         throw new IllegalArgumentException("Parametro n non valido");
-       return n == 0 ? 1 : n * factorialRecursive(n-1);
-     }
+    // factorialRecursive - versione ricorsiva del fattoriale
+    // scopo:       restituisce il fattoriale dell'intero in input
+    // definizione: 0! = 1, n! = n(n-1)! se n > 0
+    // input:       un intero n
+    // output:      n!
+    public static int factorialRecursive(int n) throws IllegalArgumentException {
+      if (n < 0)
+        throw new IllegalArgumentException("Parametro n non valido");
+      return n == 0 ? 1 : n * factorialRecursive(n-1);
+    }
 
-     // factorial - versione iterativa del fattoriale
-     // scopo:       restituisce il fattoriale dell'intero in input
-     // definizione: 0! = 1, n! = n(n-1)! se n > 0
-     // input:       un intero n
-     // output:      n!
-     public static int factorial(int n) throws IllegalArgumentException {
-       if (n < 0)
-         throw new IllegalArgumentException("Parametro n non valido");
-       int f = 1;
-       while (n > 1) {
-         f = f * n;
-         n--;
-       }
-       return f;
-     }
+    // factorial - versione iterativa del fattoriale
+    // scopo:       restituisce il fattoriale dell'intero in input
+    // definizione: 0! = 1, n! = n(n-1)! se n > 0
+    // input:       un intero n
+    // output:      n!
+    public static int factorial(int n) throws IllegalArgumentException {
+      if (n < 0)
+        throw new IllegalArgumentException("Parametro n non valido");
+      int f = 1;
+      while (n > 1) {
+        f = f * n;
+        n--;
+      }
+      return f;
+    }
+
+    // test_factorial
+    // scopo: testare il fattoriale di un numero
+    public static void test_factorial() {
+      System.out.println("FATTORIALE di un intero\n");
+      for (int i = 0; i <= 10; i++)
+        System.out.println("Factorial(" + i + ") = " + factorial(i));
+    }
 
     // isNegative
     // scopo:  stabilire se il numero in input è negativo
@@ -72,14 +80,6 @@ public class Main {
     // output: restiuisce true se l'intero in input è positivo, false altrimenti
     public static boolean isPositive(int n) {
       return n > 0;
-    }
-
-    // test_factorial
-    // scopo: testare il fattoriale di un numero
-    public static void test_factorial() {
-      System.out.println("FATTORIALE di un intero\n");
-      for (int i = 0; i <= 10; i++)
-        System.out.println("Factorial(" + i + ") = " + factorial(i));
     }
 
     // toString
@@ -108,8 +108,8 @@ public class Main {
     // toLowerCase
     // scopo:  restituisce la stringa in input in minuscolo
     // input:  una stringa s
-    // output: una nuova stringa dove i caratteri quelli della stringa in input,
-    //         ma tutti minuscoli
+    // output: una nuova stringa simile alla stringa in input
+    //         dove tutti i caratteri sono minuscoli
     public static String toLowerCase(String s) {
         return new String(s).toLowerCase();
     }
@@ -117,8 +117,8 @@ public class Main {
     // toUpperCase
     // scopo:  restituisce la stringa in input in maiuscolo
     // input:  una stringa s
-    // output: una nuova stringa dove i caratteri quelli di della stringa in input,
-    //         ma tutti maiuscoli
+    // output: una nuova stringa simile alla stringa in input
+    //         dove tutti i caratteri sono maiuscoli
     public static String toUpperCase(String s) {
         return new String(s).toUpperCase();
     }
