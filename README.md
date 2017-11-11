@@ -7,6 +7,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 *Numbers*
 * *absolute*
 * *factorial* iterative and recursive version
+* *toString*
 
 *Strings*
 * *reverse*

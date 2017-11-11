@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    10 Nov 2017
+// Date:    11 Nov 2017
 // Version: 1.0
 //
 
@@ -64,6 +64,14 @@ public class Main {
       System.out.println("FATTORIALE di un intero\n");
       for (int i = 0; i <= 10; i++)
         System.out.println("Factorial(" + i + ") = " + factorial(i));
+    }
+
+    // toString
+    // scopo: convertire l'intero in input in una stringa
+    // input: un intero
+    // output: la conversione dell'intero in input in una stringa
+    public static String toString(int i) {
+      return Integer.toString(i);
     }
 
     /*******************************
