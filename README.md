@@ -21,4 +21,4 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 ## Autori
 
-* **Alessandro Brusò** - [ProgramMINI in Java](https://github.com/abruso/ProgramMINI-Java)
+* **Alessandro Brusò** - [Alessandro Brusò](https://github.com/abruso)
