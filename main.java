@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    11 Nov 2017
+// Date:    12 Nov 2017
 // Version: 1.0
 //
 
@@ -81,6 +81,34 @@ public class Main {
     public static boolean isPositive(int n) {
       return n > 0;
     }
+    
+    // isPrime
+    // scopo:       stabilire se un numero è primo
+    // definizione: un intero > 1 è primo se è divisibile solo per 1 e per sé stesso
+    // input:       un intero n
+    // output:      restituisce true se l'intero in input è un numero primo, false altrimenti
+    public static boolean isPrime(int n) {
+        // numeri negativi, 0, 1 non sono primi
+        // numeri pari non sono primi, eccetto 2
+        if ((n < 2) || (n % 2 == 0))
+          return n == 2;
+        // cerco i divisori tra i numeri dispari fino a raggiungere la meta
+        int half = n / 2;
+        for (int i = 3; i < half; i += 2)
+          if (n % i == 0)
+            return false;
+        return true;
+    }
+    
+    // test_isPrime
+    // scopo: testare se dei numeri sono primi
+    public static void test_isPrime() {
+      System.out.println("NUMERI PRIMI\n");
+      System.out.print("Sono primi: "); 
+      for (int i = -1; i <= 20; i++)
+        System.out.print((isPrime(i) ? " " + i : ""));
+    }
+
 
     // toString
     // scopo: convertire l'intero in input in una stringa
@@ -147,6 +175,8 @@ public class Main {
       test_absolute();
       System.out.println();
       test_factorial();
+      System.out.println();
+      test_isPrime();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();

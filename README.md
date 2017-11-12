@@ -9,6 +9,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *factorial* iterative and recursive version
 * *isNegative*
 * *isPositive*
+* *isPrime*
 * *toString*
 
 *Strings*
