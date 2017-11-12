@@ -82,17 +82,20 @@ public class Main {
       return n > 0;
     }
     
-    // isPrime
+    // isPrime - è un numero primo
     // scopo:       stabilire se un numero è primo
-    // definizione: un intero > 1 è primo se è divisibile solo per 1 e per sé stesso
+    // definizione: un intero > 1 è primo se è divisibile
+    //              solo per 1 e per sé stesso
     // input:       un intero n
-    // output:      restituisce true se l'intero in input è un numero primo, false altrimenti
+    // output:      restituisce true se l'intero in input è un numero primo,
+    //              false altrimenti
     public static boolean isPrime(int n) {
         // numeri negativi, 0, 1 non sono primi
         // numeri pari non sono primi, eccetto 2
         if ((n < 2) || (n % 2 == 0))
           return n == 2;
-        // cerco i divisori tra i numeri dispari fino a raggiungere la meta
+        // cerco i divisori tra i numeri dispari
+        // fino a raggiungere la metà di n
         int half = n / 2;
         for (int i = 3; i < half; i += 2)
           if (n % i == 0)
