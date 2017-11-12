@@ -6,12 +6,14 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 *Numbers*
 * *absolute*
+* *cube*
 * *factorial* iterative and recursive version
 * *isNegative*
 * *isNegativeOrZero*
 * *isPositive*
 * *isPositiveOrZero*
 * *isPrime*
+* *square*
 * *toString*
 
 *Strings*

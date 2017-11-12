@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    12 Nov 2017
+// Date:    13 Nov 2017
 // Version: 1.0
 //
 
@@ -29,6 +29,22 @@ public class Main {
      System.out.println("VALORE ASSOLUTO di un numero\n");
      for (int i = -5; i <= 5; i++)
        System.out.println("Absolute(" + i + ") = " + absolute(i));
+    }
+
+    // square
+    // scopo:  calcolare il quadrato di un numero
+    // input:  un intero n
+    // output: n^2 
+    public static int square(int n) {
+      return n * n;
+    }
+
+    // square
+    // scopo:  calcolare il cubo di un numero
+    // input:  un intero n
+    // output: n^3
+    public static int cube(int n) {
+      return n * n * n;
     }
 
     // factorialRecursive - versione ricorsiva del fattoriale
