@@ -21,4 +21,4 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 ## Autori
 
-* **Alessandro Brusò** - [Alessandro Brusò](https://github.com/abruso)
+* [Alessandro Brusò](https://github.com/abruso)
