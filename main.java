@@ -74,12 +74,28 @@ public class Main {
       return n < 0;
     }
 
+    // isNegativeOrZero
+    // scopo:  stabilire se il numero in input è negativo o uguale a 0
+    // input:  un intero n
+    // output: restiuisce true se l'intero in input <=, false altrimenti
+    public static boolean isNegativeOrZero(int n) {
+      return n <= 0;
+    }
+
     // isPositive
     // scopo:  stabilire se il numero in input è positivo
     // input:  un intero n
     // output: restiuisce true se l'intero in input è positivo, false altrimenti
     public static boolean isPositive(int n) {
       return n > 0;
+    }
+
+    // isPositiveOrZero
+    // scopo:  stabilire se il numero in input è positivo o uguale a 0
+    // input:  un intero n
+    // output: restiuisce true se l'intero in input >=, false altrimenti
+    public static boolean isPositiveOrZero(int n) {
+      return n >= 0;
     }
     
     // isPrime - è un numero primo
@@ -110,6 +126,7 @@ public class Main {
       System.out.print("Sono primi: "); 
       for (int i = -1; i <= 20; i++)
         System.out.print((isPrime(i) ? " " + i : ""));
+      System.out.println();
     }
 
 
