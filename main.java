@@ -145,6 +145,29 @@ public class Main {
       System.out.println();
     }
 
+    // SquareRoot - Radice quadrata intera
+    // scopo:  calcola la radice quadrata intera di un intero in input
+    // input:    un intero x sul quale calcolare la radice quadrata intera
+    // output: restituisce la radice quadrata, arrotondata per difetto, dell'intero x in input
+    //               restituisce -1 se l'intero x in input è negativo
+    public static int squareRoot(int x) throws IllegalArgumentException {
+      if (x < 0)
+        throw new IllegalArgumentException("Parametro x non valido.");
+      int squareRoot = 0;
+      while (squareRoot * squareRoot <= x)
+        squareRoot++;
+      return --squareRoot;
+    }
+
+    // test_squareRoot
+    // scopo: testare se dei numeri sono primi
+    public static void test_squareRoot() {
+      System.out.println("RADICE QUADRATA INTERA\n");
+      for (int i = 0; i <= 16; i++) {
+        String response = String.format("Radice quadrata (%d): %d", i, squareRoot(i));
+        System.out.println(response);
+      }
+    }
 
     // toString
     // scopo: convertire l'intero in input in una stringa
@@ -213,6 +236,8 @@ public class Main {
       test_factorial();
       System.out.println();
       test_isPrime();
+      System.out.println();
+      test_squareRoot();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();
