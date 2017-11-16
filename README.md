@@ -18,6 +18,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *toString*
 
 *Strings*
+* *isPalindrome*
 * *reverse*
 * *toLowerCase*
 * *toUpperCase*

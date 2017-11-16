@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    13 Nov 2017
+// Date:    16 Nov 2017
 // Version: 1.0
 //
 
@@ -183,6 +183,20 @@ public class Main {
      *
      *******************************/
 
+    // isPalindrome
+    // scopo:  dire se la stringa in input è palindroma
+    //         Una stringa palindroma è una sequenza di caratteri identica
+    //         se letta da sinistra verso destra oppure da destra verso sinistra
+    // input:  una stringa s
+    // output: true se la stringa in input è palindroma, false altrimenti
+    // nota:   vengono ignorati gli spazi e
+    //         la differenza tra lettere maiuscole e minuscole
+    public static boolean isPalindrome(String s) {
+        String ss = s.replaceAll("\\s+","");
+        String reverse = new StringBuilder(ss).reverse().toString();
+        return ss.equalsIgnoreCase(reverse);
+    }
+
     // reverse
     // scopo:  restituisce la stringa in input al contrario
     // input:  una stringa s
@@ -214,11 +228,12 @@ public class Main {
     // scopo: testare le funzionalità sulle stringhe
     public static void test_string() {
       System.out.println("TEST di una stringa\n");
-      String s = "Ciao";
-      System.out.println("Original:  " + s);
-      System.out.println("Reverse:   " + reverse(s));
-      System.out.println("Lowercase: " + toLowerCase(s));
-      System.out.println("Uppercase: " + toUpperCase(s));
+      String s = "ECCO GELARE NELLA VALLE NERA LE GOCCE";
+      System.out.println("Original:   " + s);
+      System.out.println("Palindrome: " + (isPalindrome(s) ? "si" : "no"));
+      System.out.println("Reverse:    " + reverse(s));
+      System.out.println("Lowercase:  " + toLowerCase(s));
+      System.out.println("Uppercase:  " + toUpperCase(s));
     }
 
     /*******************************
