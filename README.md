@@ -20,6 +20,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 *Strings*
 * *isPalindrome*
 * *reverse*
+* *readInt*
 * *toLowerCase*
 * *toUpperCase*
 

@@ -2,9 +2,11 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    16 Nov 2017
+// Date:    18 Nov 2017
 // Version: 1.0
 //
+
+import java.util.Scanner;
 
 public class Main {
 
@@ -206,6 +208,32 @@ public class Main {
         return new StringBuilder(s).reverse().toString();
     }
 
+    // readInt
+    // scopo: leggere un intero da tastiera
+    // output: l'intero letto da tastiera
+    //         viene lanciata un'eccezione se l'input non è intero
+    public static int readInt() throws Exception {
+      Scanner in = new Scanner(System.in);
+      if (!in.hasNextInt())
+        throw new Exception("Input non valido.");
+      int i = in.nextInt();
+      return i;
+    }
+
+    // test_readInt
+    // scopo: testare readInt
+    public static void test_readInt() {
+      System.out.print("Inserisci un intero: ");
+      int i;
+      try {
+          i = readInt();
+      } catch (Exception e) {
+          System.out.println("Non si tratta di un intero.");
+          return;
+      }
+      System.out.println ("Hai inserito " + i + ".");
+    }
+
     // toLowerCase
     // scopo:  restituisce la stringa in input in minuscolo
     // input:  una stringa s
@@ -234,6 +262,7 @@ public class Main {
       System.out.println("Reverse:    " + reverse(s));
       System.out.println("Lowercase:  " + toLowerCase(s));
       System.out.println("Uppercase:  " + toUpperCase(s));
+      test_readInt();
     }
 
     /*******************************
