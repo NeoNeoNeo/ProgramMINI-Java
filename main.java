@@ -183,13 +183,13 @@ public class Main {
         throw new IllegalArgumentException("Input non valido.");
       
       List<Integer> list = new ArrayList<Integer>();
-
       int c = 2;
+
       while (n > 1) {
         if (n % c == 0) {
           list.add(c);
           n = n / c;
-	} else c++;
+        } else c++;
       }
 
       return list;
