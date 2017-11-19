@@ -2,10 +2,12 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    18 Nov 2017
+// Date:    19 Nov 2017
 // Version: 1.0
 //
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -171,6 +173,39 @@ public class Main {
       }
     }
 
+    // toPrimeFactors - Fattorizzazione in numeri primi
+    // scopo:  scomporre un numero in numeri primi
+    // input:  un intero n
+    // output: un array contenente la scomposizione in numeri primi di n
+    //         lancia una eccezione se n < 2
+    public static List<Integer> toPrimeFactors(int n) throws IllegalArgumentException {
+      if (n < 2)
+        throw new IllegalArgumentException("Input non valido.");
+      
+      List<Integer> list = new ArrayList<Integer>();
+
+      int c = 2;
+      while (n > 1) {
+        if (n % c == 0) {
+          list.add(c);
+          n = n / c;
+	} else c++;
+      }
+
+      return list;
+    }
+
+    // test_toPrimeFactors
+    public static void test_toPrimeFactors() {
+      int n = 1000;
+      System.out.print("Scomposizione in fattori primi di " + n + ": ");
+      List<Integer> list = toPrimeFactors(n);
+      for (int item : list) {
+         System.out.print(" " + item);
+      }
+      System.out.println();
+    }
+
     // toString
     // scopo: convertire l'intero in input in una stringa
     // input: un intero
@@ -282,6 +317,8 @@ public class Main {
       test_isPrime();
       System.out.println();
       test_squareRoot();
+      System.out.println();
+      test_toPrimeFactors();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();

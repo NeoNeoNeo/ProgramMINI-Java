@@ -15,6 +15,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *isPrime*
 * *square*
 * *squareRoot*
+* *toPrimeFactors*
 * *toString*
 
 *Strings*
