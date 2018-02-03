@@ -8,6 +8,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *absolute*
 * *cube*
 * *factorial* iterative and recursive version
+* *fibonacci*
+* *getPrimeFactors*
 * *isNegative*
 * *isNegativeOrZero*
 * *isPositive*
@@ -15,7 +17,6 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *isPrime*
 * *square*
 * *squareRoot*
-* *toPrimeFactors*
 * *toString*
 
 *Strings*

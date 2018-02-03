@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    19 Nov 2017
+// Date:    03 Feb 2018
 // Version: 1.0
 //
 
@@ -43,7 +43,7 @@ public class Main {
       return n * n;
     }
 
-    // square
+    // cube
     // scopo:  calcolare il cubo di un numero
     // input:  un intero n
     // output: n^3
@@ -86,6 +86,16 @@ public class Main {
         System.out.println("Factorial(" + i + ") = " + factorial(i));
     }
 
+    // fibonacci
+    // purpose: calcolare l'n-esimo numero della serie di Fibonacci
+    // input:   un intero n
+    // output:  restituisce fibonacci(n)
+    public static int fibonacci(int n) throws IllegalArgumentException {
+      if (n < 0)
+        throw new IllegalArgumentException("Parametro n non valido");
+      return n < 2 ? n : fibonacci(n-1) + fibonacci(n-2);
+    }
+
     // isNegative
     // scopo:  stabilire se il numero in input è negativo
     // input:  un intero n
@@ -97,7 +107,7 @@ public class Main {
     // isNegativeOrZero
     // scopo:  stabilire se il numero in input è negativo o uguale a 0
     // input:  un intero n
-    // output: restiuisce true se l'intero in input <=, false altrimenti
+    // output: restituisce true se l'intero in input <=, false altrimenti
     public static boolean isNegativeOrZero(int n) {
       return n <= 0;
     }
@@ -173,12 +183,12 @@ public class Main {
       }
     }
 
-    // toPrimeFactors - Fattorizzazione in numeri primi
+    // getPrimeFactors - Fattorizzazione in numeri primi
     // scopo:  scomporre un numero in numeri primi
     // input:  un intero n
     // output: un array contenente la scomposizione in numeri primi di n
     //         lancia una eccezione se n < 2
-    public static List<Integer> toPrimeFactors(int n) throws IllegalArgumentException {
+    public static List<Integer> getPrimeFactors(int n) throws IllegalArgumentException {
       if (n < 2)
         throw new IllegalArgumentException("Input non valido.");
       
@@ -195,11 +205,11 @@ public class Main {
       return list;
     }
 
-    // test_toPrimeFactors
-    public static void test_toPrimeFactors() {
+    // test_getPrimeFactors
+    public static void test_getPrimeFactors() {
       int n = 1000;
       System.out.print("Scomposizione in fattori primi di " + n + ": ");
-      List<Integer> list = toPrimeFactors(n);
+      List<Integer> list = getPrimeFactors(n);
       for (int item : list) {
          System.out.print(" " + item);
       }
@@ -318,7 +328,7 @@ public class Main {
       System.out.println();
       test_squareRoot();
       System.out.println();
-      test_toPrimeFactors();
+      test_getPrimeFactors();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();
