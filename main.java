@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    03 Feb 2018
+// Date:    04 Feb 2018
 // Version: 1.0
 //
 
@@ -226,6 +226,28 @@ public class Main {
 
     /*******************************
      *
+     *   PROGRAMMINI DI GEOMETRIA
+     *
+     *******************************/
+
+    // isATriangle
+    // scopo: dire se i tre lati formano un triangolo
+    // input: tre interi corrispondenti ai tre lati
+    // output: true se i tre lati formano un triangolo, false altrimenti
+     public static boolean isATriangle(int a, int b, int c) {
+       return (a + b > c) && (a + c > b) && (b + c > a);
+     }
+
+    // isAEquilateralTriangle
+    // scopo: dire se i tre lati formano un triangolo equilatero
+    // input: tre interi corrispondenti ai tre lati
+    // output: true se i tre lati formano un triangolo equilatero, false altrimenti
+    public static boolean isAEquilateralTriangle(int a, int b, int c) {
+      return isATriangle(a, b, c) && (a == b) && (b == c);
+    }
+
+    /*******************************
+     *
      *   PROGRAMMINI SULLE STRINGHE
      *
      *******************************/
@@ -251,32 +273,6 @@ public class Main {
     //         rispetto a s
     public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
-    }
-
-    // readInt
-    // scopo: leggere un intero da tastiera
-    // output: l'intero letto da tastiera
-    //         viene lanciata un'eccezione se l'input non è intero
-    public static int readInt() throws Exception {
-      Scanner in = new Scanner(System.in);
-      if (!in.hasNextInt())
-        throw new Exception("Input non valido.");
-      int i = in.nextInt();
-      return i;
-    }
-
-    // test_readInt
-    // scopo: testare readInt
-    public static void test_readInt() {
-      System.out.print("Inserisci un intero: ");
-      int i;
-      try {
-          i = readInt();
-      } catch (Exception e) {
-          System.out.println("Non si tratta di un intero.");
-          return;
-      }
-      System.out.println ("Hai inserito " + i + ".");
     }
 
     // toLowerCase
@@ -308,6 +304,38 @@ public class Main {
       System.out.println("Lowercase:  " + toLowerCase(s));
       System.out.println("Uppercase:  " + toUpperCase(s));
       test_readInt();
+    }
+
+    /*******************************
+     *
+     *   CONSOLE
+     *
+     *******************************/
+
+    // readInt
+    // scopo: leggere un intero da tastiera
+    // output: l'intero letto da tastiera
+    //         viene lanciata un'eccezione se l'input non è intero
+    public static int readInt() throws Exception {
+      Scanner in = new Scanner(System.in);
+      if (!in.hasNextInt())
+        throw new Exception("Input non valido.");
+      int i = in.nextInt();
+      return i;
+    }
+
+    // test_readInt
+    // scopo: testare readInt
+    public static void test_readInt() {
+      System.out.print("Inserisci un intero: ");
+      int i;
+      try {
+          i = readInt();
+      } catch (Exception e) {
+          System.out.println("Non si tratta di un intero.");
+          return;
+      }
+      System.out.println ("Hai inserito " + i + ".");
     }
 
     /*******************************
