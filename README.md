@@ -4,16 +4,16 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 ## Funzionalità
 
-*Input*
+### Input
 * *readInt*
 
-*Geometry*
+### Geometry
 * *isATriangle*
 * *isAEquilateralTriangle*
 * *isAIsosceleTriangle*
 * *isAScaleneTriangle*
 
-*Numbers*
+### Numbers
 * *absolute*
 * *cube*
 * *factorial* iterative and recursive version
@@ -28,7 +28,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *squareRoot*
 * *toString*
 
-*Strings*
+### Strings
 * *isPalindrome*
 * *reverse*
 * *toLowerCase*
