@@ -10,6 +10,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 *Geometry*
 * *isATriangle*
 * *isAEquilateralTriangle*
+* *isAIsosceleTriangle*
+* *isAScaleneTriangle*
 
 *Numbers*
 * *absolute*

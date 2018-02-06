@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    04 Feb 2018
+// Date:    06 Feb 2018
 // Version: 1.0
 //
 
@@ -19,16 +19,17 @@ public class Main {
      *******************************/
 
     // absolute - valore assoluto
-    // scopo:       restituisce il valore assoluto dell'intero in input
-    // definizione: |x| = -x se x < 0, |x| = x se x >= 0
+    // purpose:     restituisce il valore assoluto dell'intero in input
+    // definition:  |x| = -x se x < 0, |x| = x se x >= 0
     // input:       un intero n
     // output:      |n|
+    // error:       lancia un'eccezione se l'input n è negativo
     public static int absolute(int n) throws IllegalArgumentException {
       return n < 0 ? -n : n;
     }
 
     // test_absolute
-    // scopo: testare il valore assoluto di un intero
+    // purpose:     testare il valore assoluto di un intero
     public static void test_absolute() {
      System.out.println("VALORE ASSOLUTO di un numero\n");
      for (int i = -5; i <= 5; i++)
@@ -36,26 +37,27 @@ public class Main {
     }
 
     // square
-    // scopo:  calcolare il quadrato di un numero
-    // input:  un intero n
-    // output: n^2 
+    // purpose:     calcolare il quadrato di un numero
+    // input:       un intero n
+    // output:      n^2 
     public static int square(int n) {
       return n * n;
     }
 
     // cube
-    // scopo:  calcolare il cubo di un numero
-    // input:  un intero n
-    // output: n^3
+    // purpose:     calcolare il cubo di un numero
+    // input:       un intero n
+    // output:      n^3
     public static int cube(int n) {
       return n * n * n;
     }
 
     // factorialRecursive - versione ricorsiva del fattoriale
-    // scopo:       restituisce il fattoriale dell'intero in input
-    // definizione: 0! = 1, n! = n(n-1)! se n > 0
+    // purpose:     restituisce il fattoriale dell'intero in input
+    // definition:  0! = 1, n! = n(n-1)! se n > 0
     // input:       un intero n
     // output:      n!
+    // error:       lancia un'eccezione se l'input n è negativo
     public static int factorialRecursive(int n) throws IllegalArgumentException {
       if (n < 0)
         throw new IllegalArgumentException("Parametro n non valido");
@@ -63,10 +65,11 @@ public class Main {
     }
 
     // factorial - versione iterativa del fattoriale
-    // scopo:       restituisce il fattoriale dell'intero in input
-    // definizione: 0! = 1, n! = n(n-1)! se n > 0
+    // purpose:     calcolare l'n-esimo numero del fattoriale
+    // definition:  0! = 1, n! = n(n-1)! se n > 0
     // input:       un intero n
     // output:      n!
+    // error:       lancia un'eccezione se l'input n è negativo
     public static int factorial(int n) throws IllegalArgumentException {
       if (n < 0)
         throw new IllegalArgumentException("Parametro n non valido");
@@ -79,7 +82,7 @@ public class Main {
     }
 
     // test_factorial
-    // scopo: testare il fattoriale di un numero
+    // purpose:     testare il fattoriale di un numero
     public static void test_factorial() {
       System.out.println("FATTORIALE di un intero\n");
       for (int i = 0; i <= 10; i++)
@@ -87,9 +90,10 @@ public class Main {
     }
 
     // fibonacci
-    // purpose: calcolare l'n-esimo numero della serie di Fibonacci
-    // input:   un intero n
-    // output:  restituisce fibonacci(n)
+    // purpose:     calcolare l'n-esimo numero della serie di Fibonacci
+    // input:       un intero n
+    // output:      restituisce fibonacci(n)
+    // error::      lancia un'eccezione se l'input n è negativo
     public static int fibonacci(int n) throws IllegalArgumentException {
       if (n < 0)
         throw new IllegalArgumentException("Parametro n non valido");
@@ -97,40 +101,40 @@ public class Main {
     }
 
     // isNegative
-    // scopo:  stabilire se il numero in input è negativo
-    // input:  un intero n
-    // output: restiuisce true se l'intero in input è negativo, false altrimenti
+    // purpose:     stabilire se il numero in input è negativo
+    // input:       un intero n
+    // output:      restiutisce true se l'intero in input è negativo, false altrimenti
     public static boolean isNegative(int n) {
       return n < 0;
     }
 
     // isNegativeOrZero
-    // scopo:  stabilire se il numero in input è negativo o uguale a 0
-    // input:  un intero n
-    // output: restituisce true se l'intero in input <=, false altrimenti
+    // purpose:     stabilire se il numero in input è negativo o uguale a 0
+    // input:       un intero n
+    // output:      restituisce true se l'intero in input <=, false altrimenti
     public static boolean isNegativeOrZero(int n) {
       return n <= 0;
     }
 
     // isPositive
-    // scopo:  stabilire se il numero in input è positivo
-    // input:  un intero n
-    // output: restiuisce true se l'intero in input è positivo, false altrimenti
+    // purpose:     stabilire se il numero in input è positivo
+    // input:       un intero n
+    // output:      restituisce true se l'intero in input è positivo, false altrimenti
     public static boolean isPositive(int n) {
       return n > 0;
     }
 
     // isPositiveOrZero
-    // scopo:  stabilire se il numero in input è positivo o uguale a 0
-    // input:  un intero n
-    // output: restiuisce true se l'intero in input >=, false altrimenti
+    // purpose:     stabilire se il numero in input è positivo o uguale a 0
+    // input:       un intero n
+    // output:      restiuisce true se l'intero in input >=, false altrimenti
     public static boolean isPositiveOrZero(int n) {
       return n >= 0;
     }
     
     // isPrime - è un numero primo
-    // scopo:       stabilire se un numero è primo
-    // definizione: un intero > 1 è primo se è divisibile
+    // purpose:     stabilire se un numero è primo
+    // definition:  un intero > 1 è primo se è divisibile
     //              solo per 1 e per sé stesso
     // input:       un intero n
     // output:      restituisce true se l'intero in input è un numero primo,
@@ -150,7 +154,7 @@ public class Main {
     }
     
     // test_isPrime
-    // scopo: testare se dei numeri sono primi
+    // purpose:     testare se dei numeri sono primi
     public static void test_isPrime() {
       System.out.println("NUMERI PRIMI\n");
       System.out.print("Sono primi: "); 
@@ -160,10 +164,11 @@ public class Main {
     }
 
     // SquareRoot - Radice quadrata intera
-    // scopo:  calcola la radice quadrata intera di un intero in input
-    // input:    un intero x sul quale calcolare la radice quadrata intera
-    // output: restituisce la radice quadrata, arrotondata per difetto, dell'intero x in input
-    //               restituisce -1 se l'intero x in input è negativo
+    // purpose:     calcola la radice quadrata intera di un intero in input
+    // input:       un intero x sul quale calcolare la radice quadrata intera
+    // output:      restituisce la radice quadrata, arrotondata per difetto, dell'intero x in input
+    //              restituisce -1 se l'intero x in input è negativo
+    // error:       lancia un'eccezione se l'input x è negativo
     public static int squareRoot(int x) throws IllegalArgumentException {
       if (x < 0)
         throw new IllegalArgumentException("Parametro x non valido.");
@@ -174,7 +179,7 @@ public class Main {
     }
 
     // test_squareRoot
-    // scopo: testare se dei numeri sono primi
+    // purpose:     testare se dei numeri sono primi
     public static void test_squareRoot() {
       System.out.println("RADICE QUADRATA INTERA\n");
       for (int i = 0; i <= 16; i++) {
@@ -184,10 +189,10 @@ public class Main {
     }
 
     // getPrimeFactors - Fattorizzazione in numeri primi
-    // scopo:  scomporre un numero in numeri primi
-    // input:  un intero n
-    // output: un array contenente la scomposizione in numeri primi di n
-    //         lancia una eccezione se n < 2
+    // purpose:     scomporre un numero in numeri primi
+    // input:       un intero n
+    // output:      un array contenente la scomposizione in numeri primi di n
+    // error:       lancia una eccezione se n < 2
     public static List<Integer> getPrimeFactors(int n) throws IllegalArgumentException {
       if (n < 2)
         throw new IllegalArgumentException("Input non valido.");
@@ -206,6 +211,7 @@ public class Main {
     }
 
     // test_getPrimeFactors
+    // purpose:     testare la fattorizzazione
     public static void test_getPrimeFactors() {
       int n = 1000;
       System.out.print("Scomposizione in fattori primi di " + n + ": ");
@@ -217,9 +223,9 @@ public class Main {
     }
 
     // toString
-    // scopo: convertire l'intero in input in una stringa
-    // input: un intero
-    // output: la conversione dell'intero in input in una stringa
+    // purpose:     convertire l'intero in input in una stringa
+    // input:       un intero
+    // output:      la conversione dell'intero in input in una stringa
     public static String toString(int i) {
       return Integer.toString(i);
     }
@@ -231,19 +237,35 @@ public class Main {
      *******************************/
 
     // isATriangle
-    // scopo: dire se i tre lati formano un triangolo
-    // input: tre interi corrispondenti ai tre lati
-    // output: true se i tre lati formano un triangolo, false altrimenti
+    // purpose:     dire se i tre lati formano un triangolo
+    // input:       tre interi corrispondenti ai tre lati
+    // output:      true se i tre lati formano un triangolo, false altrimenti
      public static boolean isATriangle(int a, int b, int c) {
        return (a + b > c) && (a + c > b) && (b + c > a);
      }
 
     // isAEquilateralTriangle
-    // scopo: dire se i tre lati formano un triangolo equilatero
-    // input: tre interi corrispondenti ai tre lati
-    // output: true se i tre lati formano un triangolo equilatero, false altrimenti
+    // purpose:     dire se i tre lati formano un triangolo equilatero
+    // input:       tre interi corrispondenti ai tre lati
+    // output:      true se i tre lati formano un triangolo equilatero, false altrimenti
     public static boolean isAEquilateralTriangle(int a, int b, int c) {
       return isATriangle(a, b, c) && (a == b) && (b == c);
+    }
+
+    // isAIsosceleTriangle
+    // purpose:     dire se i tre lati formano un triangolo isoscele
+    // input:       tre interi corrispondenti ai tre lati
+    // output:      true se i tre lati formano un triangolo isoscele, false altrimenti
+    public static boolean isAIsosceleTriangle(int a, int b, int c) {
+      return isATriangle(a, b, c) && (((a == b) && (a != c)) || ((a == c) && (a != b)) || ((b == c) && (a != b)));
+    }
+
+    // isAScaleneTriangle
+    // purpose:     dire se i tre lati formano un triangolo scaleno
+    // input:       tre interi corrispondenti ai tre lati
+    // output:      true se i tre lati formano un triangolo scaleno, false altrimenti
+    public static boolean isAScaleneTriangle(int a, int b, int c) {
+      return isATriangle(a, b, c) && (a != b) && (b != c) && (c != a);
     }
 
     /*******************************
@@ -253,13 +275,13 @@ public class Main {
      *******************************/
 
     // isPalindrome
-    // scopo:  dire se la stringa in input è palindroma
-    //         Una stringa palindroma è una sequenza di caratteri identica
-    //         se letta da sinistra verso destra oppure da destra verso sinistra
-    // input:  una stringa s
-    // output: true se la stringa in input è palindroma, false altrimenti
-    // nota:   vengono ignorati gli spazi e
-    //         la differenza tra lettere maiuscole e minuscole
+    // purpose:     dire se la stringa in input è palindroma
+    //              Una stringa palindroma è una sequenza di caratteri identica
+    //              se letta da sinistra verso destra oppure da destra verso sinistra
+    // input:       una stringa s
+    // output:      true se la stringa in input è palindroma, false altrimenti
+    // note:        vengono ignorati gli spazi e
+    //              la differenza tra lettere maiuscole e minuscole
     public static boolean isPalindrome(String s) {
         String ss = s.replaceAll("\\s+","");
         String reverse = new StringBuilder(ss).reverse().toString();
@@ -267,34 +289,33 @@ public class Main {
     }
 
     // reverse
-    // scopo:  restituisce la stringa in input al contrario
-    // input:  una stringa s
-    // output: una nuova stringa dove i caratteri sono invertiti
-    //         rispetto a s
+    // purpose:     restituisce una nuova stringa pari alla stringa in input rovesciata
+    // input:       una stringa s
+    // output:      una nuova stringa dove i caratteri sono invertiti rispetto a s
     public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
     }
 
     // toLowerCase
-    // scopo:  restituisce la stringa in input in minuscolo
-    // input:  una stringa s
-    // output: una nuova stringa simile alla stringa in input
-    //         dove tutti i caratteri sono minuscoli
+    // purpose:     restituisce una nuvoa stringa pari alla stringa in input in minuscolo
+    // input:       una stringa s
+    // output:      una nuova stringa simile alla stringa in input
+    //              dove tutti i caratteri sono minuscoli
     public static String toLowerCase(String s) {
         return new String(s).toLowerCase();
     }
 
     // toUpperCase
-    // scopo:  restituisce la stringa in input in maiuscolo
-    // input:  una stringa s
-    // output: una nuova stringa simile alla stringa in input
-    //         dove tutti i caratteri sono maiuscoli
+    // purpose:     restituisce una nuvoa stringa pari alla stringa in input in maiuscolo
+    // input:       una stringa s
+    // output:      una nuova stringa simile alla stringa in input
+    //              dove tutti i caratteri sono maiuscoli
     public static String toUpperCase(String s) {
         return new String(s).toUpperCase();
     }
     
     // test_string
-    // scopo: testare le funzionalità sulle stringhe
+    // purpose:     testare le funzionalità sulle stringhe
     public static void test_string() {
       System.out.println("TEST di una stringa\n");
       String s = "ECCO GELARE NELLA VALLE NERA LE GOCCE";
@@ -313,9 +334,9 @@ public class Main {
      *******************************/
 
     // readInt
-    // scopo: leggere un intero da tastiera
-    // output: l'intero letto da tastiera
-    //         viene lanciata un'eccezione se l'input non è intero
+    // purpose:     leggere un intero da tastiera
+    // output:      l'intero letto da tastiera
+    // error:       viene lanciata un'eccezione se l'input non è intero
     public static int readInt() throws Exception {
       Scanner in = new Scanner(System.in);
       if (!in.hasNextInt())
@@ -325,7 +346,7 @@ public class Main {
     }
 
     // test_readInt
-    // scopo: testare readInt
+    // purpose:     testare readInt
     public static void test_readInt() {
       System.out.print("Inserisci un intero: ");
       int i;
