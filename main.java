@@ -2,7 +2,7 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    06 Feb 2018
+// Date:    17 Feb 2018
 // Version: 1.0
 //
 
@@ -191,7 +191,7 @@ public class Main {
     // getPrimeFactors - Fattorizzazione in numeri primi
     // purpose:     scomporre un numero in numeri primi
     // input:       un intero n
-    // output:      un array contenente la scomposizione in numeri primi di n
+    // output:      una lista contenente la scomposizione in numeri primi di n
     // error:       lancia una eccezione se n < 2
     public static List<Integer> getPrimeFactors(int n) throws IllegalArgumentException {
       if (n < 2)
@@ -268,11 +268,57 @@ public class Main {
       return isATriangle(a, b, c) && (a != b) && (b != c) && (c != a);
     }
 
+    public static void test_Triangle() {
+      int a = 3, b = 3, c = 3;
+      if (!isATriangle(a, b, c))
+        System.out.println("Questi 3 lati non formano un triangolo.");
+      if (isAEquilateralTriangle(a, b, c))
+        System.out.println("I tre lati formano un triangolo equilatero.");
+      if (isAIsosceleTriangle(a, b, c))
+        System.out.println("I tre lati formano un triangolo isoscele.");
+      if (isAScaleneTriangle(a, b, c))
+        System.out.println("I tre lati formano un triangolo scaleno.");
+    }
+
     /*******************************
      *
      *   PROGRAMMINI SULLE STRINGHE
      *
      *******************************/
+
+    // isAnagram
+    // purpose:     dire se una stringa è l'anagramma dell'altra
+    // input:       due stringhe
+    // output:      true se una stringa è l'anagramma dell'altra
+    static boolean isAnagram(String a, String b) {
+      for (int i = 0; i < a.length(); i++) {
+         char c = Character.toUpperCase(a.charAt(i));
+         int countA = 0;
+         int countB = 0;
+         for (int j = 0; j < a.length(); j++)
+            if (Character.toUpperCase(a.charAt(j)) == c)
+              countA++;
+         for (int j = 0; j < b.length(); j++)
+            if (Character.toUpperCase(b.charAt(j)) == c)
+              countB++;
+         if (countA != countB)
+           return false;
+      }
+      for (int i = 0; i < b.length(); i++) {
+         char c = Character.toUpperCase(b.charAt(i));
+         int countA = 0;
+         int countB = 0;
+         for (int j = 0; j < a.length(); j++)
+            if (Character.toUpperCase(a.charAt(j)) == c)
+              countA++;
+         for (int j = 0; j < b.length(); j++)
+            if (Character.toUpperCase(b.charAt(j)) == c)
+              countB++;
+         if (countA != countB)
+           return false;
+      }
+      return true;            
+    }
 
     // isPalindrome
     // purpose:     dire se la stringa in input è palindroma
@@ -320,8 +366,9 @@ public class Main {
       System.out.println("TEST di una stringa\n");
       String s = "ECCO GELARE NELLA VALLE NERA LE GOCCE";
       System.out.println("Original:   " + s);
-      System.out.println("Palindrome: " + (isPalindrome(s) ? "si" : "no"));
       System.out.println("Reverse:    " + reverse(s));
+      System.out.println("Palindrome: " + (isPalindrome(s) ? "si" : "no"));
+      System.out.println("Anagrams:   " + "cortesia" + " e " + "sciatore" + (isAnagram("cortesia", "sciatore") ? " are anagrams." : " are not anagrams."));
       System.out.println("Lowercase:  " + toLowerCase(s));
       System.out.println("Uppercase:  " + toUpperCase(s));
       test_readInt();
@@ -378,6 +425,8 @@ public class Main {
       test_squareRoot();
       System.out.println();
       test_getPrimeFactors();
+      System.out.println();
+      test_Triangle();
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();

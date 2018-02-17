@@ -29,6 +29,7 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *toString*
 
 ### Strings
+* *isAnagram*
 * *isPalindrome*
 * *reverse*
 * *toLowerCase*
