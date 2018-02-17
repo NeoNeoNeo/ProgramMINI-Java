@@ -244,19 +244,19 @@ public class Main {
        return (a + b > c) && (a + c > b) && (b + c > a);
      }
 
-    // isAEquilateralTriangle
+    // isAnEquilateralTriangle
     // purpose:     dire se i tre lati formano un triangolo equilatero
     // input:       tre interi corrispondenti ai tre lati
     // output:      true se i tre lati formano un triangolo equilatero, false altrimenti
-    public static boolean isAEquilateralTriangle(int a, int b, int c) {
+    public static boolean isAnEquilateralTriangle(int a, int b, int c) {
       return isATriangle(a, b, c) && (a == b) && (b == c);
     }
 
-    // isAIsosceleTriangle
+    // isAnIsosceleTriangle
     // purpose:     dire se i tre lati formano un triangolo isoscele
     // input:       tre interi corrispondenti ai tre lati
     // output:      true se i tre lati formano un triangolo isoscele, false altrimenti
-    public static boolean isAIsosceleTriangle(int a, int b, int c) {
+    public static boolean isAnIsosceleTriangle(int a, int b, int c) {
       return isATriangle(a, b, c) && (((a == b) && (a != c)) || ((a == c) && (a != b)) || ((b == c) && (a != b)));
     }
 
@@ -272,9 +272,9 @@ public class Main {
       int a = 3, b = 3, c = 3;
       if (!isATriangle(a, b, c))
         System.out.println("Questi 3 lati non formano un triangolo.");
-      if (isAEquilateralTriangle(a, b, c))
+      if (isAnEquilateralTriangle(a, b, c))
         System.out.println("I tre lati formano un triangolo equilatero.");
-      if (isAIsosceleTriangle(a, b, c))
+      if (isAnIsosceleTriangle(a, b, c))
         System.out.println("I tre lati formano un triangolo isoscele.");
       if (isAScaleneTriangle(a, b, c))
         System.out.println("I tre lati formano un triangolo scaleno.");

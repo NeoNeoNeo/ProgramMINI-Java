@@ -9,8 +9,8 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 
 ### Geometry
 * *isATriangle*
-* *isAEquilateralTriangle*
-* *isAIsosceleTriangle*
+* *isAnEquilateralTriangle*
+* *isAnIsosceleTriangle*
 * *isAScaleneTriangle*
 
 ### Numbers
