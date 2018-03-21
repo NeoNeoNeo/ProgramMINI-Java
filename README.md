@@ -35,6 +35,10 @@ Piccoli programmi in Java liberamente fruibili e distribuibili.
 * *toLowerCase*
 * *toUpperCase*
 
+### Cryptography
+* *MD5*
+* *SHA-256*
+
 
 ## Autori
 

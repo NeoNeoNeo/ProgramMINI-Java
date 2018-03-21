@@ -2,19 +2,20 @@
 // PROGRAMMINI IN JAVA
 //
 // Author:  Alessandro Brusò
-// Date:    17 Feb 2018
+// Date:    21 March 2018
 // Version: 1.0
 //
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.security.*;
 
 public class Main {
 
     /*******************************
      *
-     *   PROGRAMMINI SUGLI INTERI
+     *   NUMBERS
      *
      *******************************/
 
@@ -232,7 +233,7 @@ public class Main {
 
     /*******************************
      *
-     *   PROGRAMMINI DI GEOMETRIA
+     *   GEOMETRY
      *
      *******************************/
 
@@ -282,7 +283,7 @@ public class Main {
 
     /*******************************
      *
-     *   PROGRAMMINI SULLE STRINGHE
+     *   STRING
      *
      *******************************/
 
@@ -376,6 +377,38 @@ public class Main {
 
     /*******************************
      *
+     *   CRYPTOGRAPHY
+     *
+     *******************************/
+
+    public static String MD5(String s) {
+      try {
+        java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+        byte[] array = md.digest(s.getBytes());
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < array.length; ++i) {
+          sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+        }
+        return sb.toString();
+      } catch (java.security.NoSuchAlgorithmException e) { }
+      return null;
+    }
+
+    public static String SHA256(String s) {
+      try {
+        java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");
+        byte[] array = md.digest(s.getBytes());
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < array.length; ++i) {
+          sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+        }
+        return sb.toString();
+      } catch (java.security.NoSuchAlgorithmException e) { }
+      return null;
+    }
+
+    /*******************************
+     *
      *   CONSOLE
      *
      *******************************/
@@ -430,6 +463,8 @@ public class Main {
       System.out.println("\n");
       System.out.println("STRINGHE\n\n"); 
       test_string();
+      System.out.println("MD5:     " + MD5("Ciao"));
+      System.out.println("SHA-256: " + SHA256("Ciao"));
     }
 
 }
